@@ -1,0 +1,79 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+#top{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#topLeft{
+    display: flex;
+    width: 20%;
+    height: 40px;
+    padding: 90px;
+    /* margin: 25px; */
+}
+
+#title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Search{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    width: 100%;
+}
+
+#SearchLine{
+    display: flex;
+    height: 40px;
+    width: 50%;
+
+}
+
+#main{
+    display: flex;
+    flex-direction: row;
+}
+
+#menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #eeebeb;
+    border-radius: 10px;
+    align-items: center;
+    height: 100vh;
+    width: 20%;
+    margin: 6px;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    width: 80%;
+}
+
+.linesInMenu{
+    display: flex;
+    margin: 10px;
+}
+
+.mailMessage{
+    height: 15px;
+    background-color: #e6ffdf;
+    width: 100%;
+    margin: 4px;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
