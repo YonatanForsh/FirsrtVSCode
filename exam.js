@@ -301,11 +301,11 @@ const NewDeployment = {
       
     location: "Nurth",
   
-    mission: "Kill- Hamas terrorism",
+    mission: "Kill- Hazbola terrorism",
 
-    startDate: "2025-01-01",
+    startDate: "2025-08-01",
 
-    estimatedEndDate: "2025-12-31",
+    estimatedEndDate: "2026-12-31",
 }
 
 
@@ -324,7 +324,7 @@ function Mission3(NewDeployment, militaryUnit)
     return militaryUnit;
 }
 
-console.log(Mission3(NewDeployment, militaryUnit));
+// console.log(Mission3(NewDeployment, militaryUnit));
 
 
 const newFirearm =  
@@ -332,7 +332,7 @@ const newFirearm =
 
       type: "M16 Rifle",
 
-      quantity: 500,
+      quantity: 2,
 
       status: "Operational",
 
@@ -340,7 +340,7 @@ const newFirearm =
 
 function Mission4(Firearm, militaryUnit)
 {
-    for (let f of militaryUnit.firearms)
+    for (let f of militaryUnit.equipment.firearms)
     {
         if (Firearm.type == f.type)
         {
@@ -348,20 +348,24 @@ function Mission4(Firearm, militaryUnit)
         }
         
         else{
-            militaryUnit.firearms.push(Firearm);
+            militaryUnit.equipment.firearms.push(Firearm);
         }
     }
+    return militaryUnit;
 }
+
+// console.log(Mission4(newFirearm, militaryUnit));
 
 
 function Mission5(militaryUnit)
 {
-    const trainingProgramsWeeks = 0
-    for (let i = 0; i < militaryUnit.trainingPrograms.length; i++)
+    let trainingProgramsWeeks = 0
+    for (let t of militaryUnit.trainingPrograms)
         {
-            trainingProgramsWeeks += militaryUnit.trainingPrograms.duration;
+            trainingProgramsWeeks += t.duration;
         }  
-        const sumWeeksInText = sumOfSoldiers.toString();
+        const sumWeeksInText = trainingProgramsWeeks.toString();
         return sumWeeksInText;
 }
 
+// console.log(Mission5(militaryUnit));
