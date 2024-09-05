@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="regist.css">
+    <script>
+    function f() {
+        const Fname = document.getElementById("fname").value;
+        const Lname = document.getElementById("lname").value;
+        const IdNumber = document.getElementById("IDNumber").value;
+        const Rank = document.getElementById("rank").value;
+        const Gender = document.getElementsByName("g").value;
+        alert(`Hello ${Fname} \nYour details that saved are \nFull Name: ${Fname, Lname} \nID Number is: ${IdNumber} \nRank is: ${Rank} \nGender is: ${Gender}`);
+    }
+    </script>
+</head>
+<body>
+    <div id="top">
+        <div id="linksInTop">
+            <a class="linksInTopT" href="homeArmy.html">Home</a>
+            <a class="linksInTopT" href="homeArmy.html">Back to Schedule</a>
+        </div>
+        <h1 id="mainTitel">Survival Skills - Wilderness</h1>
+    </div>
+    <div id="Details">
+        <h1 id="DetailsTitle">Training Details</h1>
+        <p id="date:" class="detail">Date: </p>
+        <p id="Instructor:" class="detail">Instructor: </p>
+        <p id="Description:" class="detail">Description: </p>
+        <p id="Duration:" class="detail">Duration: </p>
+        <p id="Equipment:" class="detail">Equipment: </p>
+    </div>
+    <h1 id="registTitle">Sign Up for Survival Skills</h1>
+    <div id="form">
+        <form action="">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value=""><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value=""><br>
+            <label for="IDNumber">Id number:</label><br>
+            <input type="text" id="IDNumber" name="IDNumber" value=""><br>
+            <label for="rank">Rank :</label>
+            <select id="rank" name="ranklist">
+                <option value="Turai">Turai</option>
+                <option value="Segen">Segen</option>
+                <option value="Seren">Seren</option>
+                <option value="Aluf">Aluf</option>
+            </select><br>
+            <div class="gen">
+                <label for="gender">Gender:</label><br>
+                <div class="gen-control">
+                    <input type="radio" id="male" name="g" value="Male">
+                    <label class="genderC" for="male">Male</label>
+                </div>
+                <div class="gen-control">
+                    <input type="radio" id="female" name="g" value="Female">
+                    <label class="genderC" for="female">Female</label>
+                </div>
+            </div>
+            <input id="signUp" type="submit" onclick="f()" value="Sign Up">
+        </form>
+    </div>
+    <div id="creators">
+        <p>2024 Army trainig portal</p>
+    </div>
+</body>
+
+</html>
